@@ -15,6 +15,19 @@ class Restaurant
     @dishes.push(new_dish)
   end
 
+  def open_for_lunch?
+    if (@opening_time.to_i - 12) <= 0
+      true
+    else
+      false
+    end
+  end
 
+  def menu_dish_names
+    @dishes.each do |dish|
+      dish.upcase
+      @dishes.push(dish)
+    end 
+  end
 
 end
